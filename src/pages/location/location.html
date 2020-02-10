@@ -1,0 +1,28 @@
+<!--
+  Generated template for the LocationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Location</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <button block ion-button color="dark" (click)="getLocation()">Get Location</button>
+  <div #map id="map"></div>
+
+	<ion-card *ngIf="anyAdress">
+		<ion-card-header>Address :</ion-card-header>
+    <ion-card-content>{{anyAdress}}</ion-card-content>
+    <ion-card-content>Lattitude: {{currentPos.coords.latitude}}</ion-card-content>
+    <ion-card-content>Longitude: {{currentPos.coords.longitude}}</ion-card-content>
+    
+	</ion-card>
+
+</ion-content>
